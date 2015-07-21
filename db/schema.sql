@@ -15,8 +15,7 @@ CREATE TABLE songs (
   title VARCHAR(255),
   album VARCHAR(255),
   preview_url VARCHAR(512),
-  artist_id INTEGER REFERENCES artists(id),
-  price INTEGER
+  artist_id INTEGER REFERENCES artists(id)
 );
 
 CREATE TABLE playlists (
