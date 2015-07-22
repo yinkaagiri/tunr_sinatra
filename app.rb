@@ -2,10 +2,10 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
 
-# Connect to the DB
+# Load the file to connect to the DB
 require_relative 'db/connection.rb'
 
-# Load specific routes
+# Load specific routes / controllers
 require_relative 'controllers/artists'
 require_relative 'controllers/songs'
 require_relative 'controllers/playlists'
