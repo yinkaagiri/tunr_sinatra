@@ -23,7 +23,7 @@ a, a:visited {
 }
 
 a:hover {
-  color: #111111;
+  background-color: #ccc;
 }
 
 ul {
