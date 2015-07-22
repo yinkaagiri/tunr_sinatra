@@ -29,12 +29,14 @@ end
 
 # update
 put "/artists/:id" do
-  @artist = Artist.update!(params[:artist])
+  @artist = Artist.find(params[:id])
+  @artist.update(params[:artist])
   redirect("/artists/#{@artist.id}")
 end
 
 # destroy
-post "/artists/:id/delete" do
+delete "/artists/:id" do
   @artist = Artist.find(params[:id])
-  erb(:"artists/index")
+  @artist.destroy
+  redirect to("/artists")
 end

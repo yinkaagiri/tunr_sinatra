@@ -29,12 +29,14 @@ end
 
 # update
 put "/songs/:id" do
-  @song = Song.update!(params[:song])
+  @song = Song.find(params[:id])
+  @song.update(params[:song])
   redirect("/songs/#{@song.id}")
 end
 
 # destroy
-post "/songs/:id/delete" do
+delete "/songs/:id" do
   @song = Song.find(params[:id])
-  erb(:"songs/index")
+  @song.destroy
+  redirect to("/songs")
 end
