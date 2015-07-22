@@ -1,8 +1,5 @@
 require 'active_record'
-ActiveRecord::Base.establish_connection({
-  database: 'tunr_db',
-  adapter: 'postgresql'
-})
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/tunr_db')
 
 # models
 require_relative '../models/artist'
