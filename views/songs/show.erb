@@ -2,4 +2,5 @@
 <h3>By: <%= @song.artist.name %></h3>
 
 Album: <%= @song.album %></br>
-Preview_url: <%= @song.preview_url %></br>
+
+<audio controls src="<%= @song.preview_url %>"></audio>

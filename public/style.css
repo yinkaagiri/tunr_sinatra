@@ -1,0 +1,32 @@
+body{
+  font-family:'Helvetica Neue', sans-serif;
+  max-width:800px;
+  margin:auto;
+  padding:2em 1em;
+}
+
+h1 {
+  font-inherit;
+  color:inherit;
+  letter-spacing:-.05em;
+  text-decoration:none;
+  border-bottom:1px solid black;
+}
+
+input {
+  display: block;
+  margin: 5px 0 20px 0;
+  padding: 9px;
+  border: solid 1px black;
+  width: 300px;
+  background: whitesmoke;
+}
+
+input[type=submit] {
+  width: auto;
+  padding: 9px 15px;
+  background-color: gray;
+  border: 0;
+  font-size: 14px;
+  color: #FFFFFF;
+}
