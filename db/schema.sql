@@ -1,6 +1,4 @@
-DROP TABLE IF EXISTS playlists_songs CASCADE;
 DROP TABLE IF EXISTS songs           CASCADE;
-DROP TABLE IF EXISTS playlists       CASCADE;
 DROP TABLE IF EXISTS artists         CASCADE;
 
 create table artists (
@@ -16,14 +14,4 @@ CREATE TABLE songs (
   album VARCHAR(255),
   preview_url VARCHAR(512),
   artist_id INTEGER REFERENCES artists(id)
-);
-
-CREATE TABLE playlists (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255)
-);
-
-CREATE TABLE playlists_songs (
-  song_id INTEGER REFERENCES songs(id),
-  playlist_id INTEGER REFERENCES playlists(id)
 );
