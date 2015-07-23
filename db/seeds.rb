@@ -1,5 +1,5 @@
 require 'active_record'
-require_relative 'db/connection'
+require_relative 'connection'
 
 # models
 require_relative '../models/artist'
