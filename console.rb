@@ -1,11 +1,8 @@
 require 'pry'
+require 'active_record'
 
 ## Connect to the database
-require 'active_record'
-ActiveRecord::Base.establish_connection({
-  database: 'tunr_db',
-  adapter: 'postgresql'
-})
+require_relative 'db/connection'
 
 # Load models
 require_relative 'models/artist'
