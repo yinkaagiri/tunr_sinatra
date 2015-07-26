@@ -6,8 +6,12 @@ require 'active_record'
 
 # Load specific routes / controllers
 
-# Load models
+require_relative 'controllers/artists'
+require_relative 'controllers/songs'
 
+# Load models
+require_relative 'models/artist'
+require_relative 'models/song'
 
 ####################
 #  General routes  #
