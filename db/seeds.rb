@@ -1,7 +1,7 @@
 require 'active_record'
 
 # load the database connection
-require 'db/connection'
+require_relative './connection'
 
 # models
 require_relative '../models/artist'
