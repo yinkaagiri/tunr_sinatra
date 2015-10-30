@@ -1,61 +1,53 @@
 # Tunr 1.0!
 
-Tunr is the worlds #1 music web app (those Spotify haters can't keep up with us).
+We're going to be building Tunr, the worlds #1 music catalog / player (those
+Spotify haters can't keep up with us).
 
-## Specifications
+## Part 1 - Database / Schema
 
-Tunr provides a RESTful web interface to Songs and Artists.
+In this exercise, your goal is to build out the schema for tunr, load it with
+seed data, and run some sample queries to explore the data.
 
-### Schema
+### Create the database
 
-* artists
-  * id
-  * name
-  * photo_url
-  * nationality
+Create a postgres database called `tunr_db`. Make sure to use that **exact**
+name, or you'll have trouble later on!
 
-* songs
-  * id
-  * title
-  * album
-  * preview_url
-  * artist_id
+### Create a schema
 
+Inside the db folder, create a `schema.sql` file, and then load it into your
+`tunr_db` database.
 
-For Artists, a user should be able to:
-  * view a list of all artists
-  * view detailed information on a specific artist
-    * that page should list all songs by the artist
-  * add a new artist
-  * edit an existing artist
-  * delete a artist
+Here's what our data model looks like:
 
-For Songs, a user should be able to:
-  * view a list of all songs
-  * view detailed information on a specific song
-  * add a new song (using the artist_id # to connect it to an artist
-  * edit an existing song
-  * delete a song
+*Artists*
 
-## Bonus
+| column name  | type |
+|--------------|------|
+| id   | primary key (int) |
+| name | text |
+| photo_url | text |
+| nationality | text |
 
-### Playlists
+*Songs*
 
-For playlists, a user should be able to:
-* view a list of all playlists
-* view a specific playlist (the songs on it)
-* add a new playlist
-* add songs to an existing playlist
-* remove songs from an existing playlist
-* delete a playlist
+| column name  | type |
+|--------------|------|
+|id | primary key (int) |
+|title | text |
+|album | text |
+|preview_url | text |
+|artist_id | foreign key (int) |
 
-### Even More Features
+### Load the Seed Data
 
-Add MORE features to Tun.r. Be creative and do whatever you want!
+Use psql to load the seed data located in `db/seed.sql`
 
-If you need some ideas, though, here are a few:
-* Use a select box of artist names instead of artist_id when adding/editing
-  songs.
-* Use [HTML5 Audio](http://www.w3schools.com/html/html5_audio.asp) tag to embed
-  an audio player (for the preview url) next to every song.
-* Add some style using CSS
+### Play with the data
+
+Using `psql`, play with the database, come up with some interesting sample
+queries, and save them in a file in the db folder called `sample_queries.sql`
+
+## Part 2 - Create the Models usign Active Record
+
+## Part 3 - Build a RESTful Interface using Sinatra
