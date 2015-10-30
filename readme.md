@@ -48,6 +48,6 @@ Use psql to load the seed data located in `db/seed.sql`
 Using `psql`, play with the database, come up with some interesting sample
 queries, and save them in a file in the db folder called `sample_queries.sql`
 
-## Part 2 - Create the Models usign Active Record
+## Part 2 - Create the Models Using Active Record
 
 ## Part 3 - Build a RESTful Interface using Sinatra
