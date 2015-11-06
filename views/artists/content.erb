@@ -1,0 +1,10 @@
+
+<h1><%=@artist.name%></h1>
+
+    <h2><%=@artist.nationality%></h2>
+    <img src="<%=artist.photo_url%>"></img>
+    <li>
+    <% @artist.songs.each do |song|%>
+    <%=song.title%>
+    <li>
+    <%end%>
